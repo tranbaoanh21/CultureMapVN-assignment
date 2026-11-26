@@ -1,0 +1,21 @@
+% Bo cuc noi dung rieng cua bao cao; khong thay doi template goc.
+\newcommand{\ReportBodyLayout}{%
+  \setlength{\parskip}{5pt plus 1pt minus 1pt}%
+  \setstretch{1.2}%
+  \setlist[itemize]{topsep=5pt,itemsep=3pt,parsep=1pt,partopsep=0pt}%
+  \setlist[enumerate]{topsep=5pt,itemsep=3pt,parsep=1pt,partopsep=0pt}%
+  \renewcommand{\arraystretch}{1.4}%
+  \setlength{\extrarowheight}{2pt}%
+}
+
+\newcommand{\ReportBlockHeading}[1]{%
+  \par\addvspace{8pt}%
+  \noindent\textbf{#1}\par\nobreak\vspace{2pt}%
+  \noindent\ignorespaces
+}
+
+\newcommand{\ReportNeedSpace}[1]{%
+  \par\ifdim\dimexpr\pagegoal-\pagetotal\relax<#1\relax
+    \newpage
+  \fi
+}

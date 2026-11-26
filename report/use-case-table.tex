@@ -1,0 +1,28 @@
+% Bo cuc bang dac ta tham khao docs/phase-2/group-report cua bai CNPM BTL.
+% Giu dung hai cot L{32mm}, L{112mm} va header lap khi sang trang.
+\newcommand{\UseCaseHeading}[1]{%
+  \ReportNeedSpace{0.42\textheight}%
+  \par\medskip\noindent{\large\bfseries #1}\par\nobreak\smallskip
+}
+
+\newcommand{\UseCaseSpecificationStyle}{%
+  \fontsize{11}{13.2}\selectfont
+  \setstretch{1.15}%
+  \setlength{\parskip}{0pt}%
+  \renewcommand{\arraystretch}{1.25}%
+  \setlength{\extrarowheight}{0pt}%
+  \setlength{\LTpre}{0.4em}%
+  \setlength{\LTpost}{0.4em}%
+  \captionsetup[table]{font=normalsize}%
+}
+
+% Giu Exception Flows, Lien quan va Dependencies di cung nhau nhu mau.
+\newcommand{\KeepUseCaseRow}{%
+  \\*\noalign{%
+    \nobreak
+    \hbox to\linewidth{\hfil
+      \vrule height\arrayrulewidth width\dimexpr144mm+4\tabcolsep+3\arrayrulewidth\relax
+      \hfil}%
+    \nobreak
+  }%
+}

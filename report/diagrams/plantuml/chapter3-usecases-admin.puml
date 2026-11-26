@@ -1,0 +1,19 @@
+@startuml
+!include culturemap-style.puml
+left to right direction
+skinparam nodesep 10
+skinparam ranksep 25
+actor "Admin" as Admin
+rectangle "CultureMap VN - Quản trị" {
+  usecase "Đăng nhập, đăng xuất\nUC-10" as Auth
+  usecase "Xử lý đóng góp\nUC-05" as ReviewSubmission
+  usecase "Xử lý báo cáo sai lệch\nUC-06" as ReviewReport
+  usecase "Quản lý bài và nguồn\nUC-07" as ManageContent
+  usecase "Quản lý trạng thái thành viên\nUC-09" as ManageAccounts
+}
+Admin -- Auth
+Admin -- ReviewSubmission
+Admin -- ReviewReport
+Admin -- ManageContent
+Admin -- ManageAccounts
+@enduml

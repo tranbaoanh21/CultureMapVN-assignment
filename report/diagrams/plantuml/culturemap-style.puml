@@ -1,0 +1,34 @@
+' Theo quy uoc trinh bay PlantUML cua bai CNPM BTL.
+' Khong chua quyet dinh cong nghe hoac nghiep vu cua de tai tham khao.
+!pragma layout smetana
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam monochrome true
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam ArrowColor black
+skinparam ArrowFontColor black
+skinparam ArrowFontSize 14
+skinparam nodesep 35
+skinparam ranksep 45
+skinparam packageStyle rectangle
+skinparam ActorBackgroundColor white
+skinparam ActorBorderColor black
+skinparam UsecaseBackgroundColor white
+skinparam UsecaseBorderColor black
+skinparam RectangleBackgroundColor white
+skinparam RectangleBorderColor black
+skinparam PackageBackgroundColor white
+skinparam PackageBorderColor black
+skinparam ActivityBackgroundColor white
+skinparam ActivityBorderColor black
+skinparam ActivityDiamondBackgroundColor white
+skinparam ActivityDiamondBorderColor black
+skinparam ActivityBarColor black
+skinparam NoteBackgroundColor white
+skinparam NoteBorderColor black
+skinparam state {
+  BackgroundColor white
+  BorderColor black
+  FontColor black
+}

@@ -1,0 +1,108 @@
+\section{Giới thiệu đề tài}
+\label{sec:overview}
+\begingroup
+\setstretch{1.15}
+\setlength{\parskip}{4pt}
+
+\subsection{Bối cảnh và lý do chọn đề tài}
+Sản phẩm thủ công, làng nghề, món ăn và địa điểm văn hóa là những điểm tiếp
+cận cụ thể để tìm hiểu bản sắc địa phương. Một hình ảnh hay tên gọi giúp
+nhận diện đối tượng, nhưng chưa thể hiện đầy đủ nguyên liệu, kỹ thuật,
+tập quán sử dụng và câu chuyện của cộng đồng. Thông tin cần được đặt trong
+bối cảnh địa phương và liên kết với nguồn tham khảo.
+
+Người đọc có thể tiếp cận nội dung này qua các cổng du lịch, hồ sơ di sản
+và bộ sưu tập trực tuyến. Vietnam Tourism tổ chức nội dung theo điểm đến
+và trải nghiệm; Wonders of Vietnam của Google Arts \& Culture kết nối
+câu chuyện văn hóa với tư liệu trực quan \cite{vietnam-culture,google-wonders}.
+CultureMap VN tập trung vào trải nghiệm bắt đầu từ một tỉnh thành trên bản
+đồ, tìm đến nội dung cụ thể, kiểm tra nguồn và hỏi thêm về bài đang đọc.
+
+\subsection{Bài toán và hướng giải quyết}
+\begin{itemize}
+  \item \textbf{Khó bắt đầu khám phá:} người đọc có thể biết tên tỉnh nhưng
+  chưa biết tên sản phẩm hoặc làng nghề. Hệ thống cung cấp bản đồ tỉnh thành
+  song song với tìm kiếm theo tên địa điểm, tên bài và từ khóa.
+  \item \textbf{Cần kiểm tra và sửa thông tin:} thành viên có thể gửi đề xuất
+  bài mới hoặc báo thông tin sai lệch kèm minh chứng. Admin đối chiếu nguồn
+  trước khi công bố bài hoặc cập nhật nội dung.
+  \item \textbf{Muốn tìm hiểu thêm:} phần hỏi đáp sử dụng tư liệu của bài
+  đang đọc để trả lời kèm căn cứ; thông báo khi chưa đủ thông tin.
+\end{itemize}
+
+Ví dụ, khách chọn một tỉnh có dữ liệu, mở bài về làng nghề và hỏi nguyên
+liệu tạo ra sản phẩm. Nếu phát hiện tên gọi chưa chính xác, thành viên
+chọn báo sai lệch và đính kèm minh chứng. Admin đối chiếu tài liệu và có
+thể công bố một phiên bản đã sửa.
+
+\subsection{Mục tiêu}
+Mục tiêu tổng quát là xây dựng website khám phá văn hóa theo địa phương,
+có dữ liệu biên soạn truy nguyên được nguồn và hỗ trợ hỏi đáp trong phạm vi
+hẹp. Mục tiêu cụ thể gồm:
+\begin{enumerate}
+  \item Cho phép tìm kiếm, chọn tỉnh trên bản đồ và đọc nội dung công khai.
+  \item Phân biệt khách vãng lai, thành viên và admin bằng quyền rõ ràng;
+  cho phép thành viên gửi bài đề xuất, báo sai lệch và theo dõi kết quả.
+  \item Hỗ trợ admin biên soạn, kiểm chứng nguồn, công bố bài và xử lý
+  yêu cầu của thành viên. Lưu lịch sử phiên bản để đối chiếu thay đổi.
+  \item Tích hợp RAG để hỏi đáp có căn cứ từ tư liệu bài đọc; thực hiện
+  fine-tuning quy mô nhỏ và đánh giá trước/sau trên một nhiệm vụ phù hợp.
+  \item Liên kết yêu cầu với use case, mô hình dữ liệu, thiết kế tương tác,
+  giao diện và ca kiểm thử để kiểm chứng phần được hiện thực.
+\end{enumerate}
+
+\ReportNeedSpace{33mm}
+\subsection{Đối tượng sử dụng}
+\textbf{Khách vãng lai} khám phá, đọc nguồn và hỏi thêm mà không cần tài
+khoản. \textbf{Thành viên} đã đăng nhập có thể gửi đề xuất bài mới, báo
+sai lệch và theo dõi kết quả xử lý. \textbf{Admin} quản lý bài, nguồn,
+phiên bản và kiểm chứng các yêu cầu. Nhóm thực hiện chuẩn bị dữ liệu
+ban đầu để hệ thống có nội dung khi đưa vào sử dụng.
+
+\subsection{Phạm vi đề tài}
+\subsubsection{Phạm vi nội dung và địa lý}
+Nội dung tập trung vào sản phẩm đặc trưng, nghề và làng nghề, ẩm thực, địa
+điểm văn hóa. Mỗi bài có một tỉnh thành chính để điều hướng và một chủ đề
+chính; những liên hệ với địa phương khác được giải thích trong bài, không
+mang ý nghĩa khẳng định độc quyền văn hóa cho một tỉnh.
+
+Bản đồ thể hiện Việt Nam và dự kiến có dữ liệu cho khoảng 3--5 tỉnh/thành
+đại diện Bắc, Trung và Nam. Những tỉnh còn lại xuất hiện trên bản đồ nền
+ở trạng thái bất hoạt. Tên tỉnh, mã liên kết bản đồ và mốc địa giới phải
+thống nhất. Tên địa danh trong tài liệu cũ được giữ theo bối cảnh lịch sử.
+
+\subsubsection{Các nhóm chức năng của hệ thống}
+\begin{longtable}{|L{33mm}|L{111mm}|}
+\caption{Các nhóm chức năng của phiên bản đồ án}\label{tab:scope}\\\hline
+\rowcolor{gray!15}\textbf{Nhóm} & \textbf{Nội dung dự kiến}\\\hline
+Khám phá văn hóa & Tìm kiếm, chọn tỉnh có dữ liệu trên bản đồ, lọc theo danh mục, đọc bài và nguồn.\\\hline
+Nội dung và kiểm chứng & Thành viên gửi bài đề xuất, báo sai lệch và theo dõi kết quả. Admin đối chiếu nguồn, công bố hoặc cập nhật bài và lưu lịch sử phiên bản.\\\hline
+AI hỗ trợ tìm hiểu & RAG theo tư liệu bài đọc; thử nghiệm fine-tuning quy mô nhỏ trên nhiệm vụ do nhóm thống nhất và đánh giá kết quả.\\\hline
+\end{longtable}
+Phạm vi hiện thực và yêu cầu chi tiết được trình bày ở Chương~\ref{sec:requirements}.
+
+\subsubsection{Giới hạn}
+Đặt tour, đặt vé, thanh toán, chỉ đường, đánh giá sao và mạng xã hội nằm
+ngoài phạm vi. Quyền công bố và sửa bài chính thức thuộc admin. Địa phương
+và danh mục được nạp sẵn. Lưu yêu thích và cá nhân hóa là chức năng tùy
+chọn. Phần AI gồm RAG theo tư liệu đã kiểm chứng và fine-tuning quy mô nhỏ
+trên mô hình có sẵn. Nhiệm vụ và cách đánh giá được trình bày ở
+Chương~\ref{sec:ai}.
+
+\subsection{Ràng buộc và tiêu chí chất lượng}
+Nhóm gồm ba sinh viên; thiết kế ưu tiên ít thành phần vận hành và dữ liệu
+có thể chuẩn bị thủ công. Nguồn văn hóa và lớp địa giới phải có xuất xứ,
+điều kiện sử dụng và mốc dữ liệu. Yêu cầu, quyền, CSDL và hành vi hiện thực
+phải nhất quán. Các mục tiêu chất lượng và cách kiểm chứng được trình bày ở
+Chương~\ref{sec:requirements} và Chương~\ref{sec:evaluation}.
+
+\subsection{Chuẩn bị nội dung và nguồn dữ liệu}
+Nhóm biên soạn dữ liệu ban đầu từ cơ quan văn hóa, bảo tàng, hồ sơ di sản
+hoặc tài liệu có đơn vị phát hành rõ. Bài giới thiệu ghi nguồn hỗ trợ và
+xuất xứ hình ảnh; thành viên khác đọc đối chiếu dữ kiện trước khi admin
+công khai. Đây là trách nhiệm trong nhóm, không tạo thêm vai trò phần mềm.
+Các dữ kiện còn mâu thuẫn cần được làm rõ hoặc tạm chưa sử dụng. Nguồn lớp
+bản đồ, điều kiện sử dụng và mốc địa giới được kiểm tra riêng để phù hợp
+với danh mục địa phương của hệ thống.
+
+\endgroup

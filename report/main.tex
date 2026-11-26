@@ -1,0 +1,70 @@
+\documentclass[10pt,a4paper]{article}
+
+\newcommand{\HCMUTAssetPath}{assets/template}
+\usepackage{hcmut-report}
+\usepackage{float}
+\usepackage{amsmath}
+\input{metadata}
+\input{readability}
+\input{use-case-table}
+
+\hypersetup{
+  pdftitle={CultureMap VN - Bao cao Do an tong hop},
+  pdfauthor={Nhom thuc hien CultureMap VN},
+  pdfsubject={He thong kham pha van hoa va ban sac dia phuong Viet Nam}
+}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{2}
+
+% Danh so lien tuc theo chuong, chi ap dung tai bao cao nay.
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\makeatletter
+\renewcommand*\l@subsection{\@dottedtocline{2}{1.5em}{2.7em}}
+\makeatother
+
+
+\begin{document}
+\pagenumbering{gobble}
+\MakeHCMUTCover
+\pagenumbering{roman}
+\fancyfoot[R]{\scriptsize\ttfamily Trang \thepage}
+\input{frontmatter}
+
+\clearpage
+\begingroup
+\small\setstretch{1}
+\setlength{\parskip}{0pt}
+\makeatletter
+\patchcmd{\l@section}{1.0em}{0.2em}{}{}
+\makeatother
+\tableofcontents
+\endgroup
+\clearpage
+\begingroup
+\small\setstretch{1}\setlength{\parskip}{0pt}
+\listoffigures
+\addcontentsline{toc}{section}{Danh sách hình}
+\vspace{5mm}
+\listoftables
+\addcontentsline{toc}{section}{Danh sách bảng}
+\endgroup
+
+\clearpage
+\pagenumbering{arabic}
+\ReportBodyLayout
+\fancyfoot[R]{\scriptsize\ttfamily Trang \thepage/\pageref*{LastPage}}
+\input{sections/01-introduction}
+\clearpage\input{sections/02-background-and-related-work}
+\clearpage\input{sections/03-requirements}
+\clearpage\input{sections/04-system-design}
+\clearpage\input{sections/05-ai-solution}
+\clearpage\input{sections/06-implementation-and-deployment}
+\clearpage\input{sections/07-testing-and-evaluation}
+\clearpage\input{sections/08-conclusion}
+\clearpage\input{sections/09-references}
+
+\end{document}
